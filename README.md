@@ -7,7 +7,7 @@ Course Project: Reproduction of ADT model using ReChorus
 
 ##  小组信息
 * **成员**：孟昊  黄键乐
-* **学号**：23330096  
+* **学号**：23330096  23330043
 
 ##  运行环境
 * Python 3.10
