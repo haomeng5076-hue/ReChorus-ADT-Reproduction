@@ -54,3 +54,23 @@ python main.py --model_name NeuMF --dataset Grocery_and_Gourmet_Food --denoise_d
 ```
 # 3. 运行说明:
 为快速得到结果,运行代码均进行10轮训练(--epoch 10),建议再指令后加上--batch_size 2048 以提高运行速度。
+
+# 4. 文件说明:
+
+本项目基于 ReChorus 框架进行 ADT 模型复现，主要包含以下核心文件与修改：
+
+### 1. 核心模型代码
+* **`src/models/general/ADT.py`** **【核心工作】** ADT (Adaptive Denoising Training) 模型的完整实现代码。
+  * 实现了论文中的自适应去噪损失函数 (Adaptive Denoising Loss)。
+  * 包含 `Truncated Cross-Entropy` 和 `Drop Rate` 的动态计算逻辑。
+
+### 2. 框架修复与优化
+* **`src/helpers/BaseRunner.py`**  针对 ADT 模型的 Point-wise 训练方式进行了适配修改：若运行出现错误可替换为改文件。
+ 
+### 3. 数据处理脚本
+* **`src/get_data.py`** 用于自动下载并预处理 **MovieLens-1M** 数据集（转换格式、划分训练/测试集）。
+* **`src/get_amazon_data.py`** 用于自动下载并预处理 **Amazon Grocery & Gourmet Food** 数据集，以满足多数据集对比实验的要求。
+
+### 4. 项目入口
+* **`src/main.py`** 项目的启动入口文件，用于解析命令行参数并加载对应的 Runner 进行训练与测试。
+* **`requirements.txt`** 项目运行所需的 Python 依赖库列表（PyTorch, Pandas, NumPy, Tqdm 等）。
