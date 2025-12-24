@@ -14,6 +14,10 @@ Course Project: Reproduction of ADT model using ReChorus
 * PyTorch (CPU Version)
 * NumPy, Pandas, Tqdm
 
+* 依赖库安装 (Install Dependencies):
+  ```bash
+  pip install -r requirements.txt
+
 ##  快速开始
 
 ### 1. 数据准备
@@ -26,7 +30,7 @@ python get_data.py
 # 准备 Amazon Grocery 数据集
 python get_amazon_data.py
 ```
-# 2. 运行模型
+2. 运行模型
 复现实验包含 ADT (本文模型) 以及 BPRMF、NeuMF 两个基线模型。
 在 MovieLens-1M 数据集上运行：
 ```bash
