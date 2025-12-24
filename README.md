@@ -53,4 +53,4 @@ python main.py --model_name BPRMF --dataset Grocery_and_Gourmet_Food --denoise_d
 python main.py --model_name NeuMF --dataset Grocery_and_Gourmet_Food --denoise_drop_rate 0.1 --path ../data/ --test_all 1 --epoch 10
 ```
 # 3. 运行说明:
-为快速达到结果,运行代码均进行10轮训练(--epoch 10),建议再指令后加上--batch_size 2048 以提高运行速度。
+为快速得到结果,运行代码均进行10轮训练(--epoch 10),建议再指令后加上--batch_size 2048 以提高运行速度。
